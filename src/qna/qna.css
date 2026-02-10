@@ -1,0 +1,38 @@
+@import 'tailwindcss';
+
+@layer components {
+  .qna-container {
+    @apply mx-auto p-16 box-border m-0 text-[#333];
+    @apply min-[850px]:px-8 min-[850px]:py-14;
+    @apply min-[1680px]:px-6 min-[1680px]:py-10;
+  }
+  .qna-title {
+    @apply w-full max-w-113 mx-auto mb-9 font-bold text-[21px];
+    @apply min-[850px]:w-196.5 min-[850px]:max-w-full min-[850px]:text-[28px];
+    @apply min-[1680px]:w-7xl min-[1680px]:text-[38px];
+  }
+  .qna-summary {
+    @apply flex justify-between items-center cursor-pointer list-none border-b border-gray-300 group-open:border-none;
+  }
+  .qna-question {
+    @apply text-base font-bold px-5 py-4 text-black;
+  }
+  .svg-icon {
+    @apply flex items-center justify-center shrink-0 w-6 h-6 mr-2 text-black;
+  }
+  .qna-content {
+    @apply px-6 py-6 border-b border-gray-300 text-gray-700;
+  }
+  .qna-text {
+    @apply text-base text-black mb-6;
+  }
+  .qna-list {
+    @apply flex flex-col gap-6 list-decimal list-inside mb-10;
+  }
+  .qna-list-item {
+    @apply text-base -ml-5 pl-5;
+  }
+  .qna-add-text {
+    @apply text-base font-semibold leading-[150%] border-b border-gray-400 box-border pb-1 text-black;
+  }
+}

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taxi About Page - Tailwind</title>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <!-- About 섹션 시작 -->
+    <main id="main-content">
+      <!-- About 카드 영역 - aria-labelledby로 스크린 리더 접근성 확보 -->
+      <section class="mx-auto flex max-w-[1280px] justify-center gap-9 p-16 max-[850px]:flex-col max-[850px]:items-start max-[850px]:px-8 max-[850px]:py-14 max-[500px]:px-6 max-[500px]:py-10" aria-labelledby="about-set-title">
+        <!-- 스크린 리더 전용 섹션 제목 -->
+        <!-- 화면에는 보이지 않지만 스크린 리더에서 섹션의 의미를 전달 -->
+        <h2 id="about-set-title" class="sr-only">UT 회사 정보 및 소식</h2>
+
+        <!-- 회사소개 카드 -->
+        <article class="flex flex-1 flex-col items-start gap-3 bg-white">
+          <!-- 아이콘 - stroke에 currentColor 사용 → Tailwind text 색상과 연동 -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" class="text-black">
+            <path
+              d="M12 21V13M12 21L5.83752 16.5982C5.42695 16.305 5.22166 16.1583 5.11083 15.943C5 15.7276 5 15.4753 5 14.9708V8M12 21L18.1625 16.5982C18.573 16.305 18.7783 16.1583 18.8892 15.943C19 15.7276 19 15.4753 19 14.9708V8M12 13L5 8M12 13L19 8M5 8L10.8375 3.83034C11.3989 3.42938 11.6795 3.2289 12 3.2289C12.3205 3.2289 12.6011 3.42938 13.1625 3.83034L19 8"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linejoin="round"
+            />
+          </svg>
+
+          <!-- 카드 제목 -->
+          <h3 class="text-[21px] font-semibold leading-[150%] text-black">회사소개</h3>
+
+          <!-- 카드 설명 -->
+          <p class="text-base leading-[160%] text-black">UT의 회사 연혁과 핵심 가치 및 UT가 창출하는 다양한 기회에 대해 알아보세요.</p>
+
+          <!-- 자세히 보기 링크 -->
+          <!-- (화면에는 '자세히 보기'만 보이고 스크린 리더에는 '회사소개 자세히 보기'로 읽힘) -->
+          <a href="/about/company" class="inline-flex items-start p-1 text-base font-semibold leading-[150%] text-black border-b border-black hover:opacity-70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2" aria-label="회사소개 자세히 보기"> 자세히 보기 </a>
+        </article>
+
+        <!-- 뉴스룸 카드 -->
+        <article class="flex flex-1 flex-col items-start gap-3 bg-white">
+          <!-- 아이콘 -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" class="text-black">
+            <rect x="5" y="4" width="14" height="17" rx="2" stroke="currentColor" stroke-width="2" />
+            <path d="M9 9H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            <path d="M9 13H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            <path d="M9 17H13" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+
+          <!-- 카드 제목 -->
+          <h3 class="text-[21px] font-semibold leading-[150%] text-black">뉴스룸</h3>
+
+          <!-- 카드 설명 -->
+          <p class="text-base leading-[160%] text-black">UT의 회사 연혁과 핵심 가치 및 UT가 창출하는 다양한 기회에 대해 알아보세요.</p>
+
+          <!-- 자세히 보기 링크 -->
+          <a href="/about/news" class="inline-flex items-start p-1 text-base font-semibold leading-[150%] text-black border-b border-black hover:opacity-70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2" aria-label="뉴스룸 자세히 보기"> 자세히 보기 </a>
+        </article>
+      </section>
+    </main>
+    <!-- About 섹션 끝 -->
+  </body>
+</html>
