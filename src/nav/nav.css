@@ -1,0 +1,51 @@
+@import 'tailwindcss';
+
+@layer components {
+  .nav-container {
+    @apply flex h-16 w-full items-center bg-black px-6 justify-between list-none m-0 p-0 gap-0;
+    @apply min-[850px]:justify-start min-[850px]:px-16;
+  }
+
+  .nav-logo-item {
+    @apply mr-6 shrink-0;
+  }
+
+  .nav-logo-link {
+    @apply flex items-center text-white no-underline text-sm font-medium whitespace-nowrap;
+  }
+
+  /* 데스크톱 전용 메뉴 아이템 */
+  .nav-desktop-item {
+    @apply hidden min-[850px]:block px-2 py-1 gap-1;
+  }
+
+  .nav-link {
+    @apply text-white no-underline text-sm font-medium whitespace-nowrap;
+  }
+
+  /* 셀렉트 박스 공통 스타일 */
+  .nav-select-wrapper {
+    @apply relative flex items-center px-1;
+  }
+
+  .nav-select {
+    @apply appearance-none bg-transparent text-white border-none text-sm font-medium pr-7 py-1 z-10 focus:outline-none cursor-pointer;
+  }
+
+  .nav-select-arrow {
+    @apply absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none flex items-center;
+  }
+
+  /* 우측 버튼 및 액션 그룹 */
+  .nav-actions {
+    @apply flex items-center gap-3;
+  }
+
+  .nav-btn-signup {
+    @apply bg-white text-black border-none py-2 px-[18px] rounded-[22px] font-bold text-sm whitespace-nowrap cursor-pointer hover:bg-gray-100;
+  }
+
+  .nav-mobile-menu-btn {
+    @apply flex min-[850px]:hidden cursor-pointer;
+  }
+}
