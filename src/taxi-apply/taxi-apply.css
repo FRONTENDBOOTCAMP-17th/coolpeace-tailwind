@@ -1,0 +1,35 @@
+@import 'tailwindcss';
+
+/* style.css */
+@layer components {
+  .field {
+    @apply flex flex-col;
+  }
+
+  .field.half {
+    @apply col-span-1;
+  }
+
+  .field.full {
+    @apply col-span-2;
+  }
+
+  .field input,
+  .field select {
+    @apply w-full h-[50px] px-3 box-border 
+           border border-[rgba(137,137,137,0.3)] 
+           bg-[#f5f5f5] 
+           transition-all duration-200 
+           outline-none
+           focus:border-black focus:bg-white
+           invalid:border-[#e22e2e] invalid:bg-[rgba(226,46,46,0.05)];
+  }
+
+  .error-text {
+    @apply hidden text-[#e22e2e] text-xs mt-[3px] font-medium;
+  }
+
+  .field:has(input:invalid, select:invalid) .error-text {
+    @apply block;
+  }
+}
