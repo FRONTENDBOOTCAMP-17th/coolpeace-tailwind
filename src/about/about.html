@@ -9,15 +9,15 @@
   <body>
     <!-- About 섹션 시작 -->
     <main id="main-content">
-      <!-- About 카드 영역 -->
+      <!-- About 카드 영역 - aria-labelledby로 스크린 리더 접근성 확보 -->
       <section class="mx-auto flex max-w-[1280px] justify-center gap-9 p-16 max-[850px]:flex-col max-[850px]:items-start max-[850px]:px-8 max-[850px]:py-14 max-[500px]:px-6 max-[500px]:py-10" aria-labelledby="about-set-title">
         <!-- 스크린 리더 전용 섹션 제목 -->
-        <!-- 화면에는 안 보이지만 접근성(A11y)을 위해 필요 -->
+        <!-- 화면에는 보이지 않지만 스크린 리더에서 섹션의 의미를 전달 -->
         <h2 id="about-set-title" class="sr-only">UT 회사 정보 및 소식</h2>
 
         <!-- 회사소개 카드 -->
         <article class="flex flex-1 flex-col items-start gap-3 bg-white">
-          <!-- 아이콘 -->
+          <!-- 아이콘 - stroke에 currentColor 사용 → Tailwind text 색상과 연동 -->
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" class="text-black">
             <path
               d="M12 21V13M12 21L5.83752 16.5982C5.42695 16.305 5.22166 16.1583 5.11083 15.943C5 15.7276 5 15.4753 5 14.9708V8M12 21L18.1625 16.5982C18.573 16.305 18.7783 16.1583 18.8892 15.943C19 15.7276 19 15.4753 19 14.9708V8M12 13L5 8M12 13L19 8M5 8L10.8375 3.83034C11.3989 3.42938 11.6795 3.2289 12 3.2289C12.3205 3.2289 12.6011 3.42938 13.1625 3.83034L19 8"
