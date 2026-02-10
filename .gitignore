@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+# 확장자 차단 (솔루션 파일 및 스왑 파일)
+*.sln
+*.sw?
+
+# 특정 파일 차단
+taxi-origin.html
+taxi-origin-css.css
