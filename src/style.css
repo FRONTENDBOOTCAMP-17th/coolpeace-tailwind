@@ -1,8 +1,7 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
---font-sans: "Pretendard Variable", sans-serif;
-
+  --font-sans: 'Pretendard Variable', sans-serif;
 }
 
 @layer components {
